@@ -1,0 +1,28 @@
+  
+{% extends 'base.html' %} {% block title %}Success{% endblock %} {% block
+content %}
+
+
+<script src="{{ url_for('static', filename="js/clipboard.min.js") }}"></script>
+
+<script>
+    var clipboard = new ClipboardJS(".btn");
+    clipboard.on("error", function(e) {
+        console.log(e);
+    }); 
+</script>
+
+<div class="content">
+  <!--h2>Your URL was successfully shortened!</h2-->
+
+  <div class="input">
+    <a
+      class="btn btn__copy"
+      data-clipboard-text='{{ url_for('index', _external=True) }}{{ code }}'>Short Url</a>
+    <input type="text" value="localhost:5001/{{ code }}" />
+    
+  </div>
+
+<script src="{{ url_for('static', filename="js/main.js") }}"></script>
+
+{% endblock %}
