@@ -1,7 +1,7 @@
 import os
 
-DB_USERNAME = 'raees'
-DB_PASSWORD = 'raees'
+DB_USERNAME = 'short'
+DB_PASSWORD = 'short'
 DB_DATABASE_NAME = 'shortener'
 DB_HOST = os.getenv('IP', '127.0.0.1')
 SQLALCHEMY_TRACK_MODIFICATIONS = True
