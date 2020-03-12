@@ -17,10 +17,7 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-EXPOSE 5000 80
+EXPOSE 5000 88
 ENTRYPOINT [ "python" ]
-
-
-
 
 CMD [ "main.py" ]
